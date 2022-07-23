@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- Title -->
-    <!-- TO DO change to your title -->
-    <title>Story title | Indiana Daily Student</title>
+
+    <!-- Title (pulls from metadata.json) -->
+    <title></title>
 
     <!-- favicon -->
-    <link rel="SHORTCUT ICON" href="https://s3.amazonaws.com/snwceomedia/ids/f07d2fab-1ce4-46fd-b3b3-44a57ab9fb95.sized-1000x1000.jpg">
+    <link rel="SHORTCUT ICON"
+        href="https://s3.amazonaws.com/snwceomedia/ids/f07d2fab-1ce4-46fd-b3b3-44a57ab9fb95.sized-1000x1000.jpg">
 
     <!-- CSS stylesheets -->
     <link rel="stylesheet" href="css/normalize.css"> <!-- normalize — removes default browser styles -->
     <!-- see how bootstrap works: https://getbootstrap.com/docs/5.1/getting-started/introduction/ -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> <!-- Bootstrap — for aligning text columns -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- Bootstrap — for aligning text columns -->
     <link rel="stylesheet" href="css/ids.css"> <!-- IDS stylesheet — default IDS styles -->
     <link rel="stylesheet" href="css/style.css"> <!-- Local stylesheet — put all your design choices here -->
 
     <!-- Font Awesome — for the social media icons and hamburger menu icon -->
-    <script src="https://kit.fontawesome.com/ea52966d59.js" crossorigin="anonymous"></script>    
+    <script src="https://kit.fontawesome.com/ea52966d59.js" crossorigin="anonymous"></script>
 
     <!-- TO DO: SOCIAL CARDS — editors will help you with this, don't worry about it for now -->
     <!-- BUT DONT FORGET ABOUT IT or your dom image won't show up on social media/texting -->
     <!--Open Graph Card for social display (Be sure to change these!)-->
-    <meta property="og:url" content="http://specials.idsnews.com/url"/> <!-- URL (specials.idsnews.com/blah-blah-blah) -->
-    <meta property="og:type" content="article"/>
-    <meta property="og:title" content="Headline"/> <!-- headline -->
-    <meta property="og:description" content="Abstract"/> <!-- abstract -->
+    <meta property="og:url" content="http://specials.idsnews.com/url" />
+    <!-- URL (specials.idsnews.com/blah-blah-blah) -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="Headline" /> <!-- headline -->
+    <meta property="og:description" content="Abstract" /> <!-- abstract -->
     <meta property="og:site_name" content="IDS News">
-    <meta property="og:image" content=""/> <!-- link to dominant image -->
+    <meta property="og:image" content="" /> <!-- link to dominant image -->
 
     <!--Twitter Social Card (Be sure to change these!)-->
     <meta name="twitter:card" content="summary_large_image">
@@ -48,36 +52,43 @@
         googletag.cmd = googletag.cmd || [];
     </script>
     <script>
-        googletag.cmd.push(function() {
-        //all other leaderboards
-        var mapping1 = googletag.sizeMapping()
-        .addSize([768, 0], [728, 90]) // Desktops and Tablets
-        .addSize([0, 0], [320, 50]) // Mobile devices
-        .build();
-        googletag.defineSlot('/32635621/ids_specials1_leaderboard_728x90', [[728, 90], [320, 50]], 'div-gpt-ad-1512489859064-0').defineSizeMapping(mapping1).addService(googletag.pubads());
-        googletag.defineSlot('/32635621/ids_specials2_leaderboard_728x90', [[728, 90], [320, 50]], 'div-gpt-ad-1512489859064-1').defineSizeMapping(mapping1).addService(googletag.pubads());
-        googletag.defineSlot('/32635621/ids_specials3_rectangle_300x250', [300, 250], 'div-gpt-ad-1512489859064-2').addService(googletag.pubads());
-        googletag.defineSlot('/32635621/ids_specials4_rectangle_300x250', [300, 250], 'div-gpt-ad-1512489859064-3').addService(googletag.pubads());
-        googletag.defineSlot('/32635621/ids_specials5_rectangle_300x250', [300, 250], 'div-gpt-ad-1512489859064-4').addService(googletag.pubads());
-        googletag.pubads().enableSingleRequest();
-        googletag.pubads().collapseEmptyDivs();
-        googletag.enableServices();
+        googletag.cmd.push(function () {
+            //all other leaderboards
+            var mapping1 = googletag.sizeMapping()
+                .addSize([768, 0], [728, 90]) // Desktops and Tablets
+                .addSize([0, 0], [320, 50]) // Mobile devices
+                .build();
+            googletag.defineSlot('/32635621/ids_specials1_leaderboard_728x90', [[728, 90], [320, 50]], 'div-gpt-ad-1512489859064-0').defineSizeMapping(mapping1).addService(googletag.pubads());
+            googletag.defineSlot('/32635621/ids_specials2_leaderboard_728x90', [[728, 90], [320, 50]], 'div-gpt-ad-1512489859064-1').defineSizeMapping(mapping1).addService(googletag.pubads());
+            googletag.defineSlot('/32635621/ids_specials3_rectangle_300x250', [300, 250], 'div-gpt-ad-1512489859064-2').addService(googletag.pubads());
+            googletag.defineSlot('/32635621/ids_specials4_rectangle_300x250', [300, 250], 'div-gpt-ad-1512489859064-3').addService(googletag.pubads());
+            googletag.defineSlot('/32635621/ids_specials5_rectangle_300x250', [300, 250], 'div-gpt-ad-1512489859064-4').addService(googletag.pubads());
+            googletag.pubads().enableSingleRequest();
+            googletag.pubads().collapseEmptyDivs();
+            googletag.enableServices();
         });
     </script>
 </head>
+
 <body>
     <!-- Google Tag Manager -->
     <!-- (also don't have to worry about this at all) -->
     <noscript>
-        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NBJX8F" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-NBJX8F" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
     </noscript>
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NBJX8F');
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    '//www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-NBJX8F');
     </script>
     <!-- End Google Tag Manager -->
+
+    <div class="helper"></div>
 
     <!--Header-->
     <header>
@@ -86,33 +97,23 @@
         <nav>
             <ul>
                 <li class="logo">
-                    <a href="https://www.idsnews.com"><img src="http://specials.idsnews.com/the-toll-it-took-bloomington-police-department-contract-negotiation/img/logo.png"></a>
-                    <span>Slug</span> <!-- insert your slug here -->
+                    <a href="https://www.idsnews.com">
+                        <!-- IDS LOGO SVG -->
+                        <svg viewBox="0 0 163.17 68.85">
+                            <path style="fill:white;" d="M0,67.77V1.08H19.89V67.77Z" />
+                            <path style="fill:white;"
+                                d="M32.85,67.77V1.08H58.32c19.44,0,38.34,6.21,38.34,33.3,0,26.64-20.07,33.39-39.6,33.39ZM52.74,50.4h5.85c12.06,0,17.91-4.41,17.91-16s-5.67-15.3-18.81-15.3H52.74Z" />
+                            <path style="fill:white;"
+                                d="M98.82,59l9.54-13.59c6.66,4.59,15.93,7,23.31,7,9.45,0,11.7-2.16,11.7-4.86s-2.7-3.78-12.51-4.59c-14.31-1.17-28.26-4.86-28.26-21.15C102.6,5.67,115.83,0,131,0c15.84,0,24.48,4.05,29.16,7.83l-9.9,14.31c-3.78-2.52-12.33-4.77-19-4.77s-8.73,1.08-8.73,3.69c0,3.24,2.79,4.05,12.69,4.86,14.94,1.26,28,4.14,28,20.7,0,13.5-11.52,22.23-30.87,22.23C114.66,68.85,105.84,64.53,98.82,59Z" />
+                        </svg>
+                    </a>
+                    <span id="slug"></span> <!-- slug auto pulls from metadata.json -->
                 </li>
                 <li class="toggle">
                     <i class="fas fa-bars fa-lg"></i>
                 </li>
-                <li class="item">
-                    <!-- add in the links for each social media to link directly to your story -->
-                    <!-- 
-                        for facebook: https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fspecials.idsnews.com%2Fiu-health-bloomington-hospital-price-transparency-rule-medical-bill/ 
-                        1. replace 'iu-health-bloomington-hospital-price-transparency-rule-medical-bill/' with the end of your own url
-                        2. copy the fb link into the href attribute of the fb <a> tag below (replace the '#')
-                    -->
-                    <!-- 
-                        generate a link for Twitter on this site: https://clicktotweet.com/ 
-                        1. log in to click to tweet w your personal twitter
-                        2. create a tweet: i usually just put the headline and then the link to the story
-                        3. copy the link from the site and replace the twitter href 
-                    -->
-                    <!-- 
-                        for reddit: https://www.reddit.com/submit?title=Cool%20article&url=http%3A%2F%2Fspecials.idsnews.com%2Fiu-health-bloomington-hospital-price-transparency-rule-medical-bill/
-                        1. replace 'iu-health-bloomington-hospital-price-transparency-rule-medical-bill/' with the end of your own url
-                        2. copy the reddit link into the href attribute of the reddit <a> tag below (replace the '#')
-                    -->
-                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-                    <a href="#" target="_blank"><i class="fab fa-reddit"></i></a>
+                <li id="socials" class="item">
+                    <!-- links generate automatically from metadata.json -->
                 </li>
             </ul>
         </nav>
@@ -120,8 +121,8 @@
         <!-- Headline, subhed -->
         <!-- feel free to change this up — you don't need it to have data scroll speed, 
         doesn't have to be centered, doesn't have to be 2 lines, etc. (see header options in css directions for more inspo) -->
-        <h1 data-scroll-speed="2">Steve Moore almost died.</h1>
-        <h2 data-scroll-speed="3">Now he uses his experience to show COVID-19 is real and life-changing.</h2>
+        <h1 data-scroll-speed="2">‘They don’t want to not work’</h1>
+        <h2 data-scroll-speed="3">IU graduate workers begin picketing for union recognition</h2>
 
     </header>
 
@@ -132,73 +133,149 @@
                 <div class="col-md-3 bylines">
                     <div>
                         <!-- TO DO replace publish date -->
-                        <p>Published Dec. XX, 2021</p>
+                        <p>Published April XX, 2022</p>
                     </div>
-                    <div>
+                    <div id="bylines">
                         <!-- TO DO sub in your team's contact info here -->
-                        <p>Written by <a href="idsnews.com/staff/carson-terbush">Carson TerBush</a></p>
-                        <p><small><a href="mailto:cterbush@iu.edu" target="_blank">cterbush@iu.edu</a> | <a href="https://twitter.com/_carsonology" target="_blank">@_carsonology</a></small></p>
-                        <p>Photos by <a href="idsnews.com/staff/carson-terbush">Carson TerBush</a></p>
-                        <p><small><a href="mailto:cterbush@iu.edu" target="_blank">cterbush@iu.edu</a> | <a href="https://twitter.com/_carsonology" target="_blank">@_carsonology</a></small></p>
-                        <p>Web development by <a href="idsnews.com/staff/carson-terbush">Carson TerBush</a></p>
-                        <p><small><a href="mailto:cterbush@iu.edu" target="_blank">cterbush@iu.edu</a> | <a href="https://twitter.com/_carsonology" target="_blank">@_carsonology</a></small></p>
                     </div>
                     <p class="caption"><strong>TOP PHOTO</strong> Caption</p>
                 </div>
                 <div class="col-md-6 story">
-                    <p>
-                        Before COVID-19 hit him, Steve wasn’t that worried about the virus. He knew it was important to wash your hands and sanitize, that it was good to wear a mask and it would be smart to not go out as much. But he did not think he was old enough to be seriously affected by the virus. He thought his asthma and heart condition were in check.
+                    <p class="dropcap">
+                        The phone rings, again. Justin Posthuma dashes across the narrow kitchen to pick up.
                     </p>
                     <p>
-                        Now, he is a strong advocate for wearing masks and reminds people that just because the virus hasn’t directly affected them doesn’t mean it’s fake. He tells them that he knows — he went through it himself.
+                        “Thanks for calling Trojan Horse, what can we get for you?”
                     </p>
                     <p>
-                        “I find myself getting sad for the people that get upset about having to wear a mask,” he said. “It makes me want to scratch my head.”
+                        He calls out the order to the line cook manning the grill. Within five minutes, a stack of gyros
+                        and pitas sit on the restaurant’s front counter, ready for pick up.
                     </p>
-                    <p class="related"><span style="font-family: 'Inter', sans-serif;"><b>Related:</b></span> <a href="http://specials.idsnews.com/iu-coronavirus-testing/" target="_blank" class="story-link">IU’s great big COVID-19 experiment: How one of the nation’s largest universities kept its doors open through spiking cases and daily uncertainty</a></p>
+                    <div class="ad"></div>
                     <p>
-                        He said he’s even had some conversations with his family about masks because his older daughter Allyson isn’t as enthusiastic about using them. Allyson said she is fully aware that the virus is real and recognizes the long-lasting effects, but she doesn’t like the government controlling her health or what she can and can’t do.
+                        Posthuma scrubs plates and pots and runs them through the commercial dishwasher. He negotiates a
+                        work schedule with a new employee. He refills ice baths to chill tubs of chopped veggies that
+                        don’t fit in the Trojan Horse’s fridge. He hurries back to the ringing phone.
                     </p>
+
                     <p>
-                        Steve said he supports a mask mandate, he doesn’t believe the pandemic is over and that now we should focus more on preventing COVID-19 spread than healing the economy.
+                        At 1:30 p.m., Posthuma is six hours into his Wednesday shift as the restaurant manager at the
+                        Trojan Horse. Business is slow, but his to-do list is infinite. It’s been that way for months,
+                        as the restaurant grapples with the fallout from COVID-19. Not only have profits dropped since
+                        the start of the pandemic, the Trojan Horse has also faced a severe staffing shortage.
                     </p>
-                    <figure class="small-image">
-                        <img src="https://s3.amazonaws.com/snwceomedia/ids/76adb3f2-c4df-4957-8aff-bdb46f2806b9.sized-1000x1000.jpg" alt="alt text">
+
+                    <figure class="big-image">
+                        <img src="https://s3.amazonaws.com/snwceomedia/ids/361d5dc1-0504-4e74-bac6-c4a4fc49d43e.sized-1000x1000.jpg"
+                            alt="A man in a gray polo shirt and a black apron and a blue surgical face mask is seen through a window. He's standing in the Trojan Horse kitchen, focusing on a task while colleagues bustle around him.">
                         <figcaption>
-                            A card reading “Welcome home Steve” sits on a table Oct. 17 next to the front door of the Moore household. After being released from the hospital Steve wanted to go out to dinner with his family, but was unable to because the restaurants were not open and he did not realize how quarantine had affected the community during his time in the hospital and rehabilitation centers.
+                            <p class="credit">Mallorey Daunhauer | <b>IDS</b></p>
+                            Justin Posthuma is seen cooking Dec. 3, 2021, through the window of the Trojan Horse
+                            restaurant. Posthuma works 12- to 13-hour shifts at the restaurant, helping out in whatever
+                            role needs to be filled.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        Last spring, a full kitchen staff dwindled to zero, leaving Posthuma and the owner to take over
+                        the cooking. Bartenders and floor managers became a thing of the past. Seven days a week turned
+                        to five and weekday closing time shifted from 11 p.m. to 8.
+                    </p>
+                    <p>
+                        “When the world ended,” Posthuma said, “it flipped everything upside down.”
+                    </p>
+                    <p>
+                        Before COVID-19 hit him, Steve wasn’t that worried about the virus. He knew it was important to
+                        wash your hands and sanitize, that it was good to wear a mask and it would be smart to not go
+                        out as much. But he did not think he was old enough to be seriously affected by the virus. He
+                        thought his asthma and heart condition were in check.
+                    </p>
+                    <p class="related"><span><b>Related:</b></span> <a
+                            href="http://specials.idsnews.com/iu-coronavirus-testing/" target="_blank"
+                            class="story-link">IU’s great big COVID-19 experiment: How one of the nation’s largest
+                            universities kept its doors open through spiking cases and daily uncertainty</a></p>
+                    <p>
+                        Now, he is a strong advocate for wearing masks and reminds people that just because the virus
+                        hasn’t directly affected them doesn’t mean it’s fake. He tells them that he knows — he went
+                        through it himself.
+                    </p>
+                    <p>
+                        “I find myself getting sad for the people that get upset about having to wear a mask,” he said.
+                        “It makes me want to scratch my head.”
+                    </p>
+                    <p>
+                        He said he’s even had some conversations with his family about masks because his older daughter
+                        Allyson isn’t as enthusiastic about using them. Allyson said she is fully aware that the virus
+                        is real and recognizes the long-lasting effects, but she doesn’t like the government controlling
+                        her health or what she can and can’t do.
+                    </p>
+                    <p>
+                        Steve said he supports a mask mandate, he doesn’t believe the pandemic is over and that now we
+                        should focus more on preventing COVID-19 spread than healing the economy.
+                    </p>
+                    </figure>
+                    <figure class="small-image">
+                        <img src="https://s3.amazonaws.com/snwceomedia/ids/76adb3f2-c4df-4957-8aff-bdb46f2806b9.sized-1000x1000.jpg"
+                            alt="alt text">
+                        <figcaption>
+                            <p class="credit">Izzy Myszak | <b>IDS</b></p>
+                            A card reading “Welcome home Steve” sits on a table Oct. 17 next to the front door of the
+                            Moore household. After being released from the hospital Steve wanted to go out to dinner
+                            with his family, but was unable to because the restaurants were not open and he did not
+                            realize how quarantine had affected the community during his time in the hospital and
+                            rehabilitation centers.
                         </figcaption>
                     </figure>
                     <p>
-                        However, when asked if he had any direct criticisms of President Donald Trump’s COVID-19 response, Steve said he feels that he doesn’t know as much about the virus as those in charge of our country. He said since he hasn’t served in Trump’s position he can’t condemn Trump’s actions.
+                        However, when asked if he had any direct criticisms of President Donald Trump’s COVID-19
+                        response, Steve said he feels that he doesn’t know as much about the virus as those in charge of
+                        our country. He said since he hasn’t served in Trump’s position he can’t condemn Trump’s
+                        actions.
                     </p>
                     <h3>Subheadline introducing next section</h3>
                     <p>
-                        Steve also said he doesn’t know exactly where the federal government could have crossed into state politics. He said he did not know Trump could have established a nationwide mask mandate.
+                        Steve also said he doesn’t know exactly where the federal government could have crossed into
+                        state politics. He said he did not know Trump could have established a nationwide mask mandate.
                     </p>
                     <p>
-                        Steve voted in person for President Donald Trump on October 31. He said he voted for Trump because he saw him as the lesser of two evils. He said he was scared by how aggressively the Democratic party had been attacking Trump and trying to remove a Republican president. So, he voted against the Democrats.
+                        Steve voted in person for President Donald Trump on October 31. He said he voted for Trump
+                        because he saw him as the lesser of two evils. He said he was scared by how aggressively the
+                        Democratic party had been attacking Trump and trying to remove a Republican president. So, he
+                        voted against the Democrats.
                     </p>
                     <div class="pull-quote-center">
-                        <p class="quote">“I’m just blown away that both of (my daughters) aren’t serious mask wearers."</p>
+                        <p class="quote">“I’m just blown away that both of (my daughters) aren’t serious mask wearers."
+                        </p>
                         <p class="attribute">— Steve Moore, COVID-19 survivor</p>
                     </div>
+
                     <p>
-                        He also said it’s hard for him to say the president or our state government should have put in particular restrictions in the past because we are continuously learning about the virus. Steve operates under the idea that even though our nation’s leaders know the most, we don’t know a lot about the virus.
+                        He also said it’s hard for him to say the president or our state government should have put in
+                        particular restrictions in the past because we are continuously learning about the virus. Steve
+                        operates under the idea that even though our nation’s leaders know the most, we don’t know a lot
+                        about the virus.
+                    </p>
+                    <p class="related"><span><b>Related:</b></span> <a
+                            href="http://specials.idsnews.com/iu-coronavirus-testing/" target="_blank"
+                            class="story-link">IU’s great big COVID-19 experiment: How one of the nation’s largest
+                            universities kept its doors open through spiking cases and daily uncertainty</a></p>
+                    <p>
+                        “I can’t ridicule the government like I know more than they do, because I don’t feel like any of
+                        us know a ton about this,” Steve said.
                     </p>
                     <p>
-                        “I can’t ridicule the government like I know more than they do, because I don’t feel like any of us know a ton about this,” Steve said.
-                    </p>
-                    <p>
-                        We Rate Covid Dashboards, a group of Yale University professors and medical students that evaluates university COVID-19 dashboards, assessed IU’s about a week ago. At first, it got a C+. Early this week, it was rescored to a B-.
+                        We Rate Covid Dashboards, a group of Yale University professors and medical students that
+                        evaluates university COVID-19 dashboards, assessed IU’s about a week ago. At first, it got a C+.
+                        Early this week, it was rescored to a B-.
                     </p>
                     <p class="section-break">***</p>
 
-        <!-- AD BLOCK -->
-        <!-- UNCOMMENT THIS BLOCK WHEN YOU ARE READY TO INSERT ADS -->
-        <!-- Place one ad every few scrolls. You can arrange them so they don't disrupt your design. -->
-        <!-- make sure to increment the 'adIndex' variable in the ad JS script 
+                    <!-- AD BLOCK -->
+                    <!-- UNCOMMENT THIS BLOCK WHEN YOU ARE READY TO INSERT ADS -->
+                    <!-- Place one ad every few scrolls. You can arrange them so they don't disrupt your design. -->
+                    <!-- make sure to increment the 'adIndex' variable in the ad JS script 
             so different ads appear in each ad block. -->
-                <!-- </div>
+                    <!-- </div>
             </section>
         </article> 
             <div class="bg-light ad-block">
@@ -226,66 +303,244 @@
         <article class="container">
             <section class="row justify-content-center">
                 <div class="col-md-6"> -->
-        <!-- END AD BLOCK -->
+                    <!-- END AD BLOCK -->
 
-                    <!-- image -->
-                    <figure class="big-image">
-                        <img src="https://s3.amazonaws.com/snwceomedia/ids/76adb3f2-c4df-4957-8aff-bdb46f2806b9.sized-1000x1000.jpg" alt="alt text">
+                    <!-- photo essay -->
+                    <figure class="big-image" style="padding-bottom:0;padding-top:40px;margin-bottom:0;">
+                        <img src="https://s3.amazonaws.com/snwceomedia/ids/c499ecdb-c6ee-45f0-892c-159bcca24a2a.sized-1000x1000.jpg"
+                            alt="A row of wooden booths lead to the back wall of the restaurant, which is decorated with artwork depicting Poseiden.">
                         <figcaption>
-                            A card reading “Welcome home Steve” sits on a table Oct. 17 next to the front door of the Moore household. After being released from the hospital Steve wanted to go out to dinner with his family, but was unable to because the restaurants were not open and he did not realize how quarantine had affected the community during his time in the hospital and rehabilitation centers.
+                            The upstairs section of the Trojan Horse appears Dec. 3, 2021, at 100 E. Kirkwood Ave. The
+                            restaurant has been a Bloomington staple since 1978, according to its Facebook page.
+                        </figcaption>
+                    </figure>
+                    <div class="big-image side-by-side" style="padding-top:0;">
+                        <figure class="big-image" style="padding-bottom:0;">
+                            <img src="https://s3.amazonaws.com/snwceomedia/ids/962afe1d-32b0-4f38-957c-5b4e5da2a4f7.sized-1000x1000.jpg"
+                                alt="A green fish swims near a fake plant in a tank that has a circular iron-lined door. ">
+                            <figcaption>
+                                A fish tank appears Dec. 3, 2021, in the downstairs section of the Trojan Horse
+                                restaurant in Bloomington. The restaurant is decorated with old IU paraphernalia, as
+                                well as humorous signage.
+                            </figcaption>
+                        </figure>
+                        <figure class="big-image" style="padding-bottom:25px;">
+                            <img src="https://s3.amazonaws.com/snwceomedia/ids/2b096216-335c-468b-830c-b388e8942200.sized-1000x1000.jpg"
+                                alt="A tray of food sits on a wooden counter. The tray contains two plates and a small bowl">
+                            <figcaption>
+                                A tray of food appears Dec. 3, 2021, at the Trojan Horse restaurant in Bloomington. The
+                                Greek appetizer, called Saganaki, is Fontinella cheese lit on fire and served with pita.
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <p>
+                        “That’s a horrible dashboard,” said Howard Forman, professor of public health and director of
+                        Yale's health care management program, immediately after pulling up IU’s COVID-19 tracking
+                        website on his computer. “I mean, come on, they’re a big state university, why would they have
+                        such limited information? That’s disappointing.”
+                    </p>
+                    <p>
+                        Forman, who founded We Rate Covid Dashboards with a colleague, said the site grades dashboards
+                        based on nine categories, including if they are easy to read, updated daily, provide separate
+                        student and faculty data, state how often people are tested and give a summary of how the campus
+                        is handling the coronavirus.
+                    </p>
+                    <!-- FULL PAGE IMAGE -->
+                </div>
+            </section>
+        </article>
+
+        <figure class="full-page-image show-desktop" id="mandy"></figure>
+        <figcaption class="show-desktop" style="margin: 3px 15px 30px;">
+            Mandi Priest checks on customers in her serving section Dec. 3, 2021, at the Trojan Horse in Bloomington.
+            Priest worked at the Bloomington Hospital 60 hours per week before she found out that she could make more
+            weekly working part-time at the Trojan Horse.
+        </figcaption>
+
+        <article class="container">
+            <section class="row justify-content-center">
+                <div class="col-md-6 story">
+                    <!-- END FULL PAGE IMAGE -->
+
+                    <!-- MOBILE VERSION OF FULL PAGE IMAGE -->
+                    <figure class="big-image show-mobile">
+                        <img class="show-mobile"
+                            src="https://s3.amazonaws.com/snwceomedia/ids/1ccb52ea-e975-458a-b7fa-a3254700925f.sized-1000x1000.jpg"
+                            alt="A woman wearing a black mask, a black blouse and a server's apron walks toward the camera, wooden booths on either side of her">
+                        <figcaption class="show-mobile">
+                            Mandi Priest checks on customers in her serving section Dec. 3, 2021, at the Trojan Horse in
+                            Bloomington. Priest worked at the Bloomington Hospital 60 hours ﻿per week before she found
+                            out that she could make more weekly working part-time at the Trojan Horse.
                         </figcaption>
                     </figure>
                     <p>
-                        “That’s a horrible dashboard,” said Howard Forman, professor of public health and director of Yale's health care management program, immediately after pulling up IU’s COVID-19 tracking website on his computer. “I mean, come on, they’re a big state university, why would they have such limited information? That’s disappointing.”
+                        IU earned six out of 13 possible points, increasing by one point when it was reevaluated due to
+                        an error in We Rate Covid Dashboards original grade. While easy to read, the dashboard is not
+                        updated daily, does not include city or county data, does not state how soon tests come back and
+                        does not give a summary of the campus status.
                     </p>
                     <p>
-                        Forman, who founded We Rate Covid Dashboards with a colleague, said the site grades dashboards based on nine categories, including if they are easy to read, updated daily, provide separate student and faculty data, state how often people are tested and give a summary of how the campus is handling the coronavirus.
-                    </p>
-                    <p>
-                        IU earned six out of 13 possible points, increasing by one point when it was reevaluated due to an error in We Rate Covid Dashboards original grade. While easy to read, the dashboard is not updated daily, does not include city or county data, does not state how soon tests come back and does not give a summary of the campus status. 
-                    </p>
-                    <p>
-                        University of Michigan, Ohio State University, Northwestern University and Purdue University also saw their dashboard grade increase in the recent reevaluation. Overall, five of the 14 schools in the Big Ten got a B+  — eight points — or higher, and IU had the worst score of all schools in the conference, scoring the same as Rutgers University and Northwestern University.
+                        University of Michigan, Ohio State University, Northwestern University and Purdue University
+                        also saw their dashboard grade increase in the recent reevaluation. Overall, five of the 14
+                        schools in the Big Ten got a B+ — eight points — or higher, and IU had the worst score of all
+                        schools in the conference, scoring the same as Rutgers University and Northwestern University.
                     </p>
                     <figure class="big-image">
-                        <h3 class="video">Diagnosed with a severe case of COVID-19: Steve Moore's journey through the coronavirus pandemic</h3>
+                        <h3 class="video">Diagnosed with a severe case of COVID-19: Steve Moore's journey through the
+                            coronavirus pandemic</h3>
                         <div class='embed-container'>
                             <!-- replace src attribute with your youtube embed link -->
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/mX_No71Co34" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/yeEx2VfVZlM"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
                         </div>
                         <figcaption>
-                            Steve Moore, 55, was diagnosed with COVID-19 in March. He spent 52 days in the hospital and rehabilitation center before being cleared to go home to his family.
+                            Steve Moore, 55, was diagnosed with COVID-19 in March. He spent 52 days in the hospital and
+                            rehabilitation center before being cleared to go home to his family.
                         </figcaption>
                     </figure>
                     <p class="section-break">
                         ***
                     </p>
-                    <p>
-                        We Rate Covid Dashboards, a group of Yale University professors and medical students that evaluates university COVID-19 dashboards, assessed IU’s about a week ago. At first, it got a C+. Early this week, it was rescored to a B-.
+                    <p class="dropcap">
+                        On a chilly November Friday evening, customers fill about half of the booths that run the length
+                        of the Trojan Horse’s narrow wood-paneled interior.
                     </p>
                     <p>
-                        “That’s a horrible dashboard,” said Howard Forman, professor of public health and director of Yale's health care management program, immediately after pulling up IU’s COVID-19 tracking website on his computer. “I mean, come on, they’re a big state university, why would they have such limited information? That’s disappointing.”
+                        A couple with a toddler munches on cinnamon pita points and baklava ice cream, one of the
+                        restaurant’s signature desserts. In the back corner, another couple sips a baklava milkshake
+                        through two straws. A man props up his foot on his booth, beer in hand, chatting with the server
+                        behind the bar. A brown paper takeout bag with “Nom nom soup! Have a great night! :)” written on
+                        it sits in the neighboring booth.
+                    </p>
+                    <p>
+                        The voices of Frank Sinatra and Jerry Lee Lewis emanate from the restaurant’s speakers. If it
+                        weren’t for the smart phones and face masks on almost every table, it would be difficult to tell
+                        what decade it is.
+                    </p>
+
+                    <figure class="wide-right">
+                        <img src="https://s3.amazonaws.com/snwceomedia/ids/db946046-9a8d-4a28-9858-37cdf804cea1.sized-1000x1000.jpg"
+                            alt="A brown wooden door with a circular glass window and four large, iron, slightly rusted chain links instead of a handle. In the window, paper signs reading 'Closed on Sundays & Mondays' and 'Please wear a face mask & maintain social distance' are visible.'">
+                        <figcaption>
+                            The door to the Trojan Horse restaurant on Dec. 3, 2021, in Bloomington. The door of the
+                            Bloomington restaurant uses chain links as a handle.
+                        </figcaption>
+                    </figure>
+
+                    <p>
+                        The experience of eating at the Trojan Horse has changed very little since it opened at the
+                        corner of Kirkwood and Walnut in 1978. There’s a new owner now, and the building’s brick facade
+                        was restored a few years ago, but almost everything else has stayed the same for 44 years. The
+                        spice blend used to make the gyro meat, the baklava recipe, the wooden booths, the giant wooden
+                        front ship’s door with chainlinks for a handle.
+                    </p>
+                    <p>
+                        Priest said she’s had customers who bring their kids and reminisce about coming to the Trojan
+                        Horse with their parents when they were young. One couple visited on the 10,000th day of their
+                        relationship because they had their second date there.
+                    </p>
+                    <p>
+                        “Part of coming to the Trojan Horse is that nostalgia,” Priest said.
+                    </p>
+                    <p>
+                        This reputation as a fixture in Bloomington’s restaurant scene has helped keep the place alive
+                        through COVID-19 lockdown and an economic recession. In the past few months, as people venture
+                        out to eat, more customers have frequented the Trojan Horse.
+                    </p>
+                    <p>
+                        In the past few weeks, the restaurant has had several days with close to pre-COVID-19 profits.
+                        In October, it hired half a dozen new line cooks. A couple servers, including Marquez, have
+                        since quit, but Posthuma is happy that they’re moving on to new opportunities.
+                    </p>
+
+                    <!-- small bios -->
+                    <!-- NOTE only use these for big enterprise stories or opinion pieces -->
+                    <div class="bio">
+                        <div>
+                            <img src="https://pbs.twimg.com/profile_images/1477852735278129152/vk-AiTE6_400x400.jpg"
+                                alt="Carson">
+                            <div>
+                                <p>By <a href="https://idsnews.com/staff/carson-terbush" target="_blank">Carson
+                                        TerBush</a></p>
+                                <p>Carson has worked at the IDS since 2019 as a reporter and designer. <span><a
+                                            href="https://twitter.com/_carsonology" target="_blank"><i
+                                                class="fab fa-twitter"></i> Twitter</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bio">
+                        <div>
+                            <img src="https://pbs.twimg.com/profile_images/1499562155896619014/CUD2EvuV_400x400.jpg"
+                                alt="Cate">
+                            <div>
+                                <p>By <a href="https://idsnews.com/staff/cate-charron" target="_blank">Cate Charron</a>
+                                </p>
+                                <p>Cate has worked at the IDS since 2019 as a reporter and designer. <span><a
+                                            href="https://twitter.com/catecharron" target="_blank"><i
+                                                class="fab fa-twitter"></i> Twitter</a></span></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="donate">
+                        <em>Like what you're reading?</em><br>
+                        Support independent, award-winning student journalism.
+                        <a href="" target="_blank">Donate.</a>
                     </p>
                 </div>
             </section>
         </article>
-        
+
     </main>
 
     <footer>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <p><em>Like what you're reading?</em><br>
-                        Support independent, award-winning student journalism. <a class="story-link" target="_blank" href="https://www.idsnews.com/page/donate">Donate.</a></p>
-                    <p><small>&copy; Copyright 2021 Indiana Daily Student</small></p>
-                </div>
+
+        <div class="footer-row">
+            <!-- IDS LOGO SVG -->
+            <div class="logo">
+                <a href="https://idsnews.com">
+                    <svg viewBox="0 0 163.17 68.85">
+                        <path style="fill:#990000;" d="M0,67.77V1.08H19.89V67.77Z" />
+                        <path style="fill:#990000;"
+                            d="M32.85,67.77V1.08H58.32c19.44,0,38.34,6.21,38.34,33.3,0,26.64-20.07,33.39-39.6,33.39ZM52.74,50.4h5.85c12.06,0,17.91-4.41,17.91-16s-5.67-15.3-18.81-15.3H52.74Z" />
+                        <path style="fill:#990000;"
+                            d="M98.82,59l9.54-13.59c6.66,4.59,15.93,7,23.31,7,9.45,0,11.7-2.16,11.7-4.86s-2.7-3.78-12.51-4.59c-14.31-1.17-28.26-4.86-28.26-21.15C102.6,5.67,115.83,0,131,0c15.84,0,24.48,4.05,29.16,7.83l-9.9,14.31c-3.78-2.52-12.33-4.77-19-4.77s-8.73,1.08-8.73,3.69c0,3.24,2.79,4.05,12.69,4.86,14.94,1.26,28,4.14,28,20.7,0,13.5-11.52,22.23-30.87,22.23C114.66,68.85,105.84,64.53,98.82,59Z" />
+                    </svg>
+                    <span class="show-desktop"> | Indiana Daily Student</span>
+                </a>
+            </div>
+            <a class="subscribe show-desktop" href="https://www.idsnews.com/page/newsletters" target="_blank">
+                SUBSCRIBE
+            </a>
+            <div class="socials">
+                <a href="https://www.facebook.com/idsnews" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/idsnews" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/idsnews/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://open.spotify.com/show/2XFEmhbtKuLVV6tAJl7Lx3?si=h1A1_1ETSL-GVcjgRqynqw&nd=1"
+                    target="_blank"><i class="fab fa-spotify"></i></a>
             </div>
         </div>
+        <div class="links">
+            <p><a href="https://www.idsnews.com/page/contact" target="_blank">Contact us</a></p>
+            <p><a href="https://www.idsnews.com/page/employment" target="_blank">Employment</a></p>
+            <p><a href="https://www.idsnews.com/page/policies" target="_blank">Policies</a></p>
+            <p><a href="https://s3.amazonaws.com/snwceomedia/ids/45e13f9c-6411-4947-8db6-2bf00b0e8d93.original.pdf"
+                    target="_blank">Advertising</a></p>
+            <p><a href="https://issuu.com/idsnews/docs/binder1_357aeeb2b95e46" target="_blank">Print edition</a></p>
+            <p><a href="https://www.idsnews.com/page/contact" target="_blank">Write to us</a></p>
+        </div>
+        <p class="copyright"><small>All content &copy; 2022 Indiana Daily Student</small></p>
     </footer>
-    
+
     <!-- Jquery cdn — used to set data scroll speed (set in ids.js file) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/ids.js"></script>
+    <script src="js/ads.js"></script>
+    <script src="js/bylines.js"></script>
+    <script src="js/socials.js"></script>
+    <script src="js/titleslug.js"></script>
 </body>
+
 </html>
