@@ -1,0 +1,30 @@
+{
+    "url": "your-url-here",
+    "slug": "Story slug",
+    "headline": "This is the headline",
+    "abstract": "This is the abstract",
+    "title": "Title",
+    "pub_date": "Don't forget to add the pub date",
+    "bylines": {
+        "Written by": {
+            "name": "Cate Charron",
+            "email": "catchar@iu.edu",
+            "twitter": "catcharron"
+        },
+        "Photos by": {
+            "name": "Izzy Myszak",
+            "email": "izzymyszak@iu.edu",
+            "twitter": "izzymyszak"
+        },
+        "Design and development by": {
+            "name": "Carson TerBush",
+            "email": "cterbush@iu.edu",
+            "twitter": "carsonology"
+        },
+        "Graphics by": {
+            "name": "Vivek Rao",
+            "email": "vivrao@iu.edu",
+            "twitter": "vivrao"
+        }
+    }
+}
