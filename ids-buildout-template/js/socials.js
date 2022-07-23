@@ -1,6 +1,6 @@
 // TODO: update social buttons (nav) and footer with proper social links
 
-fetch("./metadata.json")
+fetch("../metadata.json")
     .then(response => response.json())
     .then(data => {
         let fb = `https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fspecials.idsnews.com%2F${data.url}`;

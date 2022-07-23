@@ -3,7 +3,7 @@
 
 const byline_types = ["Written by", "Photos by", "Design and development by", "Graphics by"]
 let bylines_html = '';
-fetch("./metadata.json")
+fetch("../metadata.json")
     .then(response => response.json())
     .then(data => {
         for (let type of byline_types) {
