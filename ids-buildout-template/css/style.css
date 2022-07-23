@@ -27,6 +27,8 @@
     * this buildout template is mobile first. that means design for a tiny screen in the 
       general styles, then adjust for desktop in the media queries (see the bottom of the file)
       More on mobile-first design: https://medium.com/@Vincentxia77/what-is-mobile-first-design-why-its-important-how-to-make-it-7d3cf2e29d00 
+    * DELETE ALL UNUSED CODE BEFORE SUBMITTING FINAL BUILDOUT. extra code will make the 
+      buildout run slower.
     
     *********************** IMPORTANT ***********************
     BEFORE YOU SUBMIT, GO THROUGH THIS CHECKLIST: https://docs.google.com/document/d/1eeYAbM9-GZbLrcd-WeJFzeNPrtXEYn-jIBtJbAGLvzc/edit?usp=sharing
@@ -39,47 +41,125 @@
 /* set any colors you plan to use throughout the buildout here */
 /* then you can adjust the color value easily */
 :root {
-    /* --mycolor: #your color here; */
-    --idsred: #990000;
+  /* --mycolor: #your color here; */
+  --idsred: #990000;
+  --darkgray: rgb(80, 80, 80);
 
-    /* call the color in a style like this:
-    body {
-        color: var(--cream);
-    }
-    */
+  /* call the color in a style like this:
+  body {
+      color: var(--cream);
+  }
+  */
 }
+
 header {
-    /* add header image below */
-    /* can use a file path before the photo is uploaded to ceo */
-    background: url('https://s3.amazonaws.com/snwceomedia/ids/1087e76d-a086-4170-aad4-971790a5dc5f.sized-1000x1000.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center; /* adjusts image placement, can also be set as percentages */
+  /* add header image below */
+  /* can use a file path before the photo is uploaded to ceo */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.0)), url('https://s3.amazonaws.com/snwceomedia/ids/b77608f2-702c-49c9-9c98-c8342777eccb.sized-1000x1000.jpg');
 
-    /* note: there are many alternative ways to style the header
-        other than a photo and 2 headlines. 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  /* adjusts image placement, can also be set as percentages */
 
-        Here are some other IDS examples, you can inspect the code to 
-        see how they did it: 
+  /* note: there are many alternative ways to style the header
+      other than a photo and 2 headlines. 
 
-        Headlines that fade in: http://specials.idsnews.com/iu-kappa-kappa-gamma-sorority-hazing-big-little/
-        Header with a video: http://specials.idsnews.com/bloomington-bluebird-bar-coronavirus-guidelines/
-        Animated header: http://specials.idsnews.com/iu-president-michael-mcrobbie-speeches-gpt-2/
-        Another animated/fade-in header: http://specials.idsnews.com/steve-moore-almost-died-coronavirus-bloomington/
-        Header with multiple photos: http://specials.idsnews.com/what-wasnt-said-racism-indiana-university-bloomington-iu/
-        Dramatic photo header: http://specials.idsnews.com/iu-coronavirus-testing/
-        Cute animation header: http://specials.idsnews.com/will-your-mail-in-ballot-arrive-in-time-to-count-usps-election-2020/index.html
-        Cool typography (from W+P): http://specials.idsnews.com/a-little-less-than-kind-iu-theater-bloomington/index.html
-        Not full width header: http://specials.idsnews.com/how-iu-does-its-laundry/
-    */
+      Here are some other IDS examples, you can inspect the code to 
+      see how they did it: 
+
+      Headlines that fade in: http://specials.idsnews.com/iu-kappa-kappa-gamma-sorority-hazing-big-little/
+      Header with a video: http://specials.idsnews.com/bloomington-bluebird-bar-coronavirus-guidelines/
+      Animated header: http://specials.idsnews.com/iu-president-michael-mcrobbie-speeches-gpt-2/
+      Another animated/fade-in header: http://specials.idsnews.com/steve-moore-almost-died-coronavirus-bloomington/
+      Header with multiple photos: http://specials.idsnews.com/what-wasnt-said-racism-indiana-university-bloomington-iu/
+      Dramatic photo header: http://specials.idsnews.com/iu-coronavirus-testing/
+      Cute animation header: http://specials.idsnews.com/will-your-mail-in-ballot-arrive-in-time-to-count-usps-election-2020/index.html
+      Cool typography (from W+P): http://specials.idsnews.com/a-little-less-than-kind-iu-theater-bloomington/index.html
+      Not full width header: http://specials.idsnews.com/how-iu-does-its-laundry/
+  */
 }
 
 /* SET ANY MORE STYLES YOU WANT HERE: */
 
+/* 
+TYPOGRAPHY
+*/
+h1 {
+  /* top headline */
 
+}
 
+h2 {
+  /* second headline */
 
+}
 
+h1,
+h2 {
+  /* alignment */
+  text-align: center;
+  /* font */
+  font-family: Lato, sans-serif;
+  /* width of text */
+  max-width: 80%;
+  /* text color */
+  color: white;
+}
+
+h3 {
+  /* section header */
+
+}
+
+.dropcap:first-letter {
+  /* change the font/style of the dropcap if you wish to use them */
+
+}
+
+.quote {
+  /* change style of pulled quote text */
+
+}
+
+.attribute {
+  /* change style of pulled quote attribution */
+
+}
+
+.full-page-image#mandy {
+  /* set an ID (for example 'mandy') on each full page image, if you use any 
+then you can set the image in the CSS (as below) for each one since it's a 
+background image on a div, not an actual image tag
+*/
+  background-image: url('https://s3.amazonaws.com/snwceomedia/ids/1ccb52ea-e975-458a-b7fa-a3254700925f.sized-1000x1000.jpg');
+}
+
+/* 
+media queries helper
+*/
+.helper {
+  /* comment out next line to get visual help with media queries while you code */
+  display: none !important;
+
+  width: 60px;
+  height: 60px;
+  background-color: red;
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.helper::after {
+  content: 'XS';
+  color: white;
+  font-family: Lato, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+}
 
 /* MEDIA QUERIES FROM SMALLEST TO LARGEST = MOBILE FIRST */
 /* use these for responsive design — you can set different styles based on how wide the screen is */
@@ -87,25 +167,73 @@ header {
 No media query for `xs` since this is the default */
 
 /* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px) { 
-    
+@media (min-width: 576px) {
+  .helper {
+    background-color: orange;
+  }
+
+  .helper::after {
+    content: 'S';
+  }
+
+  /* 
+  SET MORE STYLES FOR SMALL DEVICES BELOW
+*/
+
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-    header {
-        /* adjust header image positioning for larger devices if needed */
-        /* you can also change the header image for mobile here */
-        /* background-position: 50% 50%; */
-    }
+  header {
+    /* adjust header image positioning for larger devices if needed */
+    /* you can also change the header image for mobile here */
+    /* background-position: 50% 50%; */
+  }
+
+  .helper {
+    background-color: yellow;
+  }
+
+  .helper::after {
+    content: 'M';
+    color: black;
+  }
+
+  /* 
+  SET MORE STYLES FOR MEDIUM DEVICES BELOW
+*/
+
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  .helper {
+    background-color: green;
+  }
+
+  .helper::after {
+    content: 'L';
+    color: white;
+  }
+
+  /* 
+  SET MORE STYLES FOR LARGE DEVICES BELOW
+*/
 
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+  .helper {
+    background-color: blue;
+  }
+
+  .helper::after {
+    content: 'XL';
+  }
+
+  /* 
+    SET MORE STYLES FOR XL DEVICES BELOW
+  */
 
 }
