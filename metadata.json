@@ -4,12 +4,15 @@
     "headline": "This is the headline",
     "abstract": "This is the abstract",
     "title": "Title",
+    "dom_image": "link to dom image",
     "pub_date": "Don't forget to add the pub date",
     "bylines": {
-        "Written by": {
+        "By": {
             "name": "Cate Charron",
             "email": "catchar@iu.edu",
-            "twitter": "catcharron"
+            "twitter": "catcharron",
+            "pfp": "https://pbs.twimg.com/profile_images/1499562155896619014/CUD2EvuV_400x400.jpg",
+            "bio": "Cate has worked at the IDS since 2019 as a reporter and designer."
         },
         "Photos by": {
             "name": "Izzy Myszak",
@@ -19,7 +22,9 @@
         "Design and development by": {
             "name": "Carson TerBush",
             "email": "cterbush@iu.edu",
-            "twitter": "carsonology"
+            "twitter": "carsonology",
+            "pfp": "https://pbs.twimg.com/profile_images/1477852735278129152/vk-AiTE6_400x400.jpg",
+            "bio": "Carson has worked at the IDS since 2019 as a reporter and designer."
         },
         "Graphics by": {
             "name": "Vivek Rao",
