@@ -39,16 +39,55 @@ html {
 /* Ignore that - CSS variables are fine to use */
 :root {
     --footer: #EDEBEB;
-    --gray: rgb(0, 0, 0, 0.1);
-    --darkgray: rgb(60, 60, 60);
-    --midgray: rgb(100, 100, 100);
+
+    /* breakpoints */
+    --small: 480px;
+    --medium: 768px;
+    --large: 1024px;
+
+    /* nav height */
+    --nav-height: 57.422px;
+
+    /* colors */
+    --idsred: #990000;
+    --offblack: rgb(24, 24, 24);
+    --gray05: rgb(242, 242, 242);
+    --gray10: rgb(230, 230, 230);
+    --gray20: rgb(204, 204, 204);
+    --gray30: rgb(179, 179, 179);
+    --gray40: rgb(153, 153, 153);
+    --gray50: rgb(128, 128, 128);
+    --gray60: rgb(102, 102, 102);
+    --gray70: rgb(77, 77, 77);
+    --gray80: rgb(51, 51, 51);
+    --gray90: rgb(26, 26, 26);
+
+    /* widths */
+    --width-xxl: 1600px;
+    --width-xl: 1280px;
+    --width-lg: 992px;
+    --width-md: 672px;
+    --width-sm: 336px;
+    --width-xs: 192px;
+
+    /* padding/margin variables */
+    --xxs: 4px;
+    --xs: 8px;
+    --sm: 16px;
+    --md: 24px;
+    --lg: 32px;
+    --xl: 48px;
+    --xxl: 64px;
 }
 
 /*
     TYPOGRAPHY
 */
-p {
-    font-family: 'PT Serif', sans-serif;
+p,
+h2,
+h2,
+h3 {
+    color: var(--gray90);
 }
 
 h1,
@@ -91,35 +130,29 @@ h3 {
 
 p {
     /* body copy */
-    font-size: 16px;
-    line-height: 26px;
+    font-family: 'PT Serif', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: var(--md);
+}
+
+figcaption,
+p.caption,
+p.credit {
+    color: var(--gray70);
 }
 
 .bylines p {
     /* bylines */
-    font-size: 14px;
-    line-height: 1;
-    margin: 0.05em;
-}
-
-.bylines div p:nth-child(even) {
-    /* adjust spacing for subbylines */
-    margin-bottom: 0.6em;
-}
-
-.bylines div:after {
-    /* add horizontal lines btwn byline divs */
-    content: "";
-    border: 1px solid var(--gray);
-    width: 100%;
-    height: 0;
-    display: block;
-    margin: 1.0em 0;
+    font-size: 16px;
+    line-height: 1.4;
+    margin: 0.2em;
+    color: var(--gray70);
 }
 
 .related {
-    padding: 1.0em 0;
-    font-size: 0.95em;
+    padding: var(--lg) 0;
+    /* font-size: 0.95em; */
 }
 
 .related span {
@@ -139,7 +172,8 @@ p {
 }
 
 .section-break {
-    /* three asterisks */
+    /* ••• */
+    color: var(--gray70);
     padding-top: 15px;
     padding-bottom: 15px;
     letter-spacing: 25px;
@@ -153,6 +187,13 @@ header {
     background-size: cover;
     height: 100vh;
     /* makes image same height as screen */
+}
+
+header .caption {
+    position: absolute;
+    bottom: -24px;
+    padding-left: var(--sm);
+    padding-right: var(--sm);
 }
 
 /* navbar */
@@ -260,8 +301,8 @@ ul div {
 /* 
     ARTICLE ALIGNMENT (flexbox added in larger view widths)
 */
-article:first-child {
-    padding-top: 5%;
+article {
+    padding-top: var(--xl);
 }
 
 section p:first-child {
@@ -270,6 +311,17 @@ section p:first-child {
 
 .bylines {
     padding-top: 6.5px;
+    max-width: var(--medium);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--sm);
+    padding-right: var(--sm);
+}
+
+#pubdate {
+    font-size: 0.85em;
+    margin-bottom: var(--md);
+    margin-top: var(--xs);
 }
 
 .line-after:after {
@@ -280,6 +332,14 @@ section p:first-child {
     height: 0;
     display: block;
     margin: 1.0em 0;
+}
+
+.story {
+    max-width: var(--medium);
+    padding-left: var(--sm);
+    padding-right: var(--sm);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* 
@@ -298,33 +358,103 @@ p.caption {
     line-height: 1.25em;
     margin-bottom: 0;
     padding-top: 4px;
+    /* padding-right: var(--md);
+    padding-left: var(--md); */
 }
 
 span.credit,
 p.credit {
     font-family: Lato, sans-serif;
     text-transform: uppercase;
-    font-size: .8em;
+    font-size: .9em;
     text-align: right;
     margin-bottom: 3px;
+    margin-top: 0;
     line-height: 1.2em;
-    padding-top: 0.5em;
+    padding-top: var(--xxs);
+}
+
+figure {
+    margin: var(--xl) auto var(--lg);
+}
+
+.lg-image {
+    max-width: var(--width-lg);
+}
+
+@media screen and (max-width: 992px) {
+    .lg-image figcaption {
+        padding-left: var(--sm);
+        padding-right: var(--sm);
+    }
+}
+
+.xl-image {
+    max-width: var(--width-xl);
+}
+
+@media screen and (max-width: 1280px) {
+    .xl-image figcaption {
+        padding-left: var(--sm);
+        padding-right: var(--sm);
+    }
+}
+
+.xxl-image {
+    max-width: var(--width-xxl);
+}
+
+@media screen and (max-width: 1600px) {
+    .xxl-image figcaption {
+        padding-left: var(--sm);
+        padding-right: var(--sm);
+    }
+}
+
+.imagegrid {
+    max-width: var(--width-xl);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 15px;
+    padding-left: var(--sm);
+    padding-right: var(--sm);
+    margin: var(--xxl) auto var(--xl);
+}
+
+.imagegrid figure {
+    margin: 0;
+}
+
+.grid-image-1 {
+    grid-area: 1/1/1/8;
+}
+
+.grid-image-2 {
+    grid-area: 1/8/1/13;
+    align-self: end;
+}
+
+.grid-image-3 {
+    grid-area: 2/1/2/6;
+}
+
+.grid-image-4 {
+    grid-area: 2/6/2/13;
+}
+
+.imagegrid .caption {
+    grid-column: 1/13;
+    max-width: var(--medium);
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--sm);
+    padding-right: var(--sm);
 }
 
 .big-graphic {
     width: 100%;
     padding-bottom: 35px;
     padding-top: 20px;
-}
-
-.big-image,
-.wide-right,
-.wide-left,
-.small-image {
-    width: 100vw;
-    padding-top: 25px;
-    padding-bottom: 30px;
-    margin-left: calc(50% - 50vw);
 }
 
 .big-image>.embed-container {
@@ -336,16 +466,12 @@ h3.video {
     margin-right: 15px;
 }
 
-figcaption {
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
 .side-by-side {
-    display: flex !important;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    /* border: 1px solid green; */
+    max-width: var(--width-lg);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    margin: var(--xl) auto var(--lg);
 }
 
 .side-by-side figure:nth-child(2) .caption,
@@ -355,19 +481,7 @@ figcaption {
 }
 
 .side-by-side figure {
-    width: 100%;
     margin: 0;
-    /* border: 1px solid orange; */
-}
-
-.wide-right {
-    padding-top: 20px;
-    padding-bottom: 30px;
-}
-
-.wide-left {
-    padding-top: 20px;
-    padding-bottom: 30px;
 }
 
 /* youtube embed styles */
@@ -420,14 +534,14 @@ figcaption {
 /* default link styles */
 a:link,
 a:visited {
-    color: black;
+    color: var(--gray90);
     text-decoration: none;
-    border-bottom: 0.125em solid black;
+    border-bottom: 0.125em solid var(--gray90);
 }
 
 a:hover,
 a:active {
-    color: black;
+    color: var(--gray90);
     border-bottom: none;
 }
 
@@ -448,15 +562,15 @@ nav li a:active {
 
 /* byline links */
 .bylines a:link,
-.bylines a:active {
-    color: black;
-    text-decoration: none;
+.bylines a:visited {
+    color: var(--gray80);
+    text-decoration: underline;
     border-bottom: none;
 }
 
 .bylines a:hover,
-.bylines a:visited {
-    color: black;
+.bylines a:active {
+    color: var(--gray80);
     text-decoration: underline;
     border-bottom: none;
 }
@@ -464,13 +578,19 @@ nav li a:active {
 /* 
     MUGS & DONATE
 */
+
+.author-bios {
+    margin-top: var(--xl);
+    margin-bottom: var(--lg);
+}
+
 .bio>div {
     display: flex;
     padding-top: 15px;
 }
 
 .bio::before,
-.donate::before {
+.bio:last-child::after {
     content: "";
     border: 1px solid lightgray;
     width: 100%;
@@ -489,8 +609,6 @@ nav li a:active {
 .bio p,
 .bio p a {
     font-family: Inter, sans-serif;
-    color: var(--midgray);
-    border-bottom-color: var(--midgray);
     line-height: 1.3em;
     margin-bottom: 0.5em;
 }
@@ -502,8 +620,8 @@ nav li a:active {
 .donate,
 .donate a {
     font-family: Lato, sans-serif;
-    color: var(--midgray);
-    border-bottom-color: var(--midgray);
+    color: var(--gray70);
+    border-bottom-color: var(--gray70);
 }
 
 /*
@@ -523,8 +641,9 @@ footer .copyright {
     text-align: center;
 }
 
-footer .copyright p {
-    margin: 0;
+footer p.copyright {
+    padding: var(--xxs);
+    padding-bottom: var(--xs);
     font-family: Lato;
     font-size: 18px;
 }
@@ -533,11 +652,11 @@ footer .links {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    margin-bottom: 10px;
+    margin-bottom: var(--sm);
 }
 
 .footer-row {
-    padding: 20px;
+    padding: var(--lg);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -613,8 +732,8 @@ footer .socials a {
     ADVERTISEMENTS
 */
 .ad {
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: var(--xxl);
+    padding-bottom: var(--xxl);
     text-align: center;
     font-family: 'Inter';
 }
@@ -628,9 +747,11 @@ footer .socials a {
 }
 
 .ad-block {
-    margin-top: 10px;
+    margin-top: var(--xl);
     padding-bottom: 20px;
-    margin-bottom: 20px;
+    margin-bottom: var(--xl);
+    background: var(--gray05);
+    width: 100%;
 }
 
 .ad-code {
@@ -681,68 +802,6 @@ No media query for `xs` since this is the default */
         margin-top: 0;
     }
 
-    /* photos */
-    .small-image {
-        width: 100%;
-        padding-bottom: 35px;
-        padding-top: 20px;
-        margin: 0;
-        display: inline-block;
-    }
-
-    .small-image .caption,
-    .small-image figcaption {
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .wide-left {
-        padding-top: 20px;
-        padding-bottom: 10px;
-        padding-right: 25px;
-        margin-left: -40%;
-        margin-bottom: 0;
-        float: left;
-        width: 80%;
-        text-align: left;
-    }
-
-    .wide-right {
-        padding-top: 20px;
-        padding-bottom: 10px;
-        padding-left: 25px;
-        margin-left: 10px;
-        margin-right: -40%;
-        margin-bottom: 0;
-        float: right;
-        width: 80%;
-    }
-
-    .side-by-side figure {
-        width: 49%;
-    }
-
-    .full-page-image {
-        height: 100vh;
-        background-size: cover;
-        background-attachment: fixed;
-        margin-bottom: 0;
-        background-position: center top;
-    }
-
-    .side-by-side figure:nth-child(2) .caption,
-    .side-by-side figure:nth-child(2) figcaption {
-        padding-left: 0;
-        padding-right: 15px;
-    }
-
-    .wide-left .caption,
-    .wide-left figcaption,
-    .wide-right .caption,
-    .wide-right figcaption {
-        padding-left: 0;
-    }
-
     /* pulled quotes */
     .pull-quote-center {
         width: 130%;
@@ -774,21 +833,29 @@ No media query for `xs` since this is the default */
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
-    /* photos */
-    .big-image {
-        width: 180%;
-        padding-bottom: 20px;
+    .wide-left {
         padding-top: 20px;
-        margin-left: -40%;
-        display: inline-block;
+        padding-bottom: 10px;
+        padding-right: 25px;
+        margin-left: -15%;
         margin-bottom: 0;
+        margin-top: 0;
+        float: left;
+        width: 60%;
+        text-align: left;
     }
 
-    .big-image .caption,
-    .big-image figcaption {
-        padding-left: 0;
-        padding-right: 0;
+    .wide-right {
+        padding-top: 20px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        margin-left: 10px;
+        margin-right: -15%;
+        margin-bottom: 0;
+        float: right;
+        width: 60%;
     }
+
 
     .big-image>.embed-container {
         margin: 0;
@@ -799,11 +866,7 @@ No media query for `xs` since this is the default */
         margin-right: 0;
     }
 
-    .caption,
-    figcaption {
-        padding-left: 0;
-        padding-right: 0 !important;
-    }
+
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
